@@ -1,0 +1,1 @@
+// console.log(duplicateZeros([0,1,7,6,0,2,0,7]))
