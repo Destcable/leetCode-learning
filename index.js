@@ -8,7 +8,7 @@ var duplicateZeros = function(arr) {
     }
     arr.splice(LENGTH_ARR)
 };
-
+ 
 var merge = function(nums1, m, nums2, n) {
     for (let i = 0; i < nums1.length; i++) {
         if ( nums1[i] == 0 ) { 
