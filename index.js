@@ -1,3 +1,32 @@
+var findMaxConsecutiveOnes = function(nums) {
+    const FIND_NUMBER = 1;
+
+    let countMaxOnes = 0;
+    let maxOne = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        if ( nums[i] === FIND_NUMBER ) { 
+            countMaxOnes++;
+            if ( maxOne < countMaxOnes ) { 
+                maxOne = countMaxOnes;
+            }
+        } else { 
+            countMaxOnes = 0;
+        }
+    }
+    return maxOne
+};
+
+var findNumbers = function(nums) {
+    let counter = 0;
+    
+    for (let i = 0; i < nums.length; i++) {
+        if ( nums[i].toString().length % 2 === 0 ) counter++;
+    } 
+    
+    return counter;
+};
+
 var duplicateZeros = function(arr) {
     const LENGTH_ARR = arr.length;
     for (let i = 0; i < arr.length; i++) {
@@ -18,19 +47,5 @@ var merge = function(nums1, m, nums2, n) {
     }
     console.log(nums1)
 };
-
-// var merge = function(nums1, m, nums2, n) {
-//     const itemRemove = 0;
-    
-//     const filterArrOne = nums1.filter((item) => item !== itemRemove);
-//     const filterArrTwo = nums2.filter((item) => item !== itemRemove);
-
-//     let resultArr = [ ...filterArrOne, ...filterArrTwo];
-
-//     resultArr.sort();
-//     resultArr.splice( m + n );
-    
-//     nums1 = resultArr
-// };
 
 console.log(merge([1,2,3,0,0,0], 3, [2,5,6], 3))
